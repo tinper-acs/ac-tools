@@ -1,0 +1,35 @@
+{
+  "name": "uba-ac-sample",
+  "version": "0.0.1",
+  "description": "uba ac  plugin for init sample",
+  "main": "index.js",
+  "bin": {
+    "ac-tools": "./bin/ac-tools.js"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuap-design/uba-init.git"
+  },
+  "keywords": [
+    "uba",
+    "init web"
+  ],
+  "author": "yueming@yonyou.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iuap-design/uba-init/issues"
+  },
+  "homepage": "https://github.com/iuap-design/uba-init#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "cross-spawn": "^5.1.0",
+    "download-git-repo": "^1.0.2",
+    "inquirer": "^3.3.0",
+    "minimist": "^1.2.0",
+    "path-exists": "^3.0.0",
+    "request": "^2.81.0"
+  }
+}
