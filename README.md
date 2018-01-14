@@ -50,7 +50,7 @@ OK,到此成功。
 
 ## 使用
 
-1. 如何使用前端集成工具`uba`来快速创建一个基本脚手架：
+1. 如何使用前端集成工具`ac-tools`来快速创建一个应用组件：
 
 ```bash
 $ mkdir app && cd app
@@ -62,15 +62,27 @@ Start development server.
 ```bash
 $ npm run dev
 ```
+After writing a good example.
+```bash
+$ ac-tools sample
+```
+After writing README.md documents.
+
+```bash
+$ ac-tools mk
+```
 
 ## api
 
 
 项目根目录，使用以下命令完成对应功能。
 
+> 5命令有1分钟的延时，请耐心等待。
+
 | # | Scripts 脚本命令 | Description 功能描述 |
 | --- | --- | --- |
 | 1 | ac-tools -h | api 查询 |
 | 2 | ac-tools -v | 版本查询 |
 | 3 | ac-tools init | 下载模板项目|
-| 4 | ac-tools sample | 生成示例代码 |
+| 4 | ac-tools sample | 编写demo时，需要生成示例代码 |
+| 5 | ac-tools mk | README.md文档转化成html发布到git io上 |
