@@ -57,7 +57,7 @@ $ ac-tools sample
 After writing README.md documents.
 
 ```bash
-$ ac-tools mk
+$ ac-tools md
 ```
 
 ## api
