@@ -17,40 +17,40 @@
     <li class="sidebar-header-1"><a href="#ac-tools">ac-tools</a></li>
     <li class="sidebar-header-2"><a href="#介绍">介绍</a></li>
     <li class="sidebar-header-2"><a href="#安装">安装</a></li>
-    <li class="sidebar-header-4"><a href="#ynpm">ynpm</a></li>
-    <li class="sidebar-header-4"><a href="#cnpm">cnpm</a></li>
-    <li class="sidebar-header-4"><a href="#npm">npm</a></li>
     <li class="sidebar-header-2"><a href="#使用">使用</a></li>
     <li class="sidebar-header-2"><a href="#api">api</a></li>
+    <li class="sidebar-header-3"><a href="#ynpm">ynpm</a></li>
+    <li class="sidebar-header-3"><a href="#cnpm">cnpm</a></li>
 </ul>
       </div>
       <div class="span9 main"><h1 id="ac-tools">ac-tools</h1>
 <h2 id="介绍">介绍</h2>
-<p>是一款组件库编写组件开发工具 <a href="https://github.com/tinper-acs">我们开发应用组件</a> 执行远程代码访问、基本组件开发构建、demo示例的生成。</p>
+<p>是一款组件库编写组件开发工具 <a href="https://github.com/tinper-acs">应用组件</a> 执行远程代码访问、基本组件开发构建、demo示例的生成。</p>
 <h2 id="安装">安装</h2>
-<p>安装 <a href="https://nodejs.org">node.js</a> 开发环境.(node &gt; 6.x &amp;&amp; npm &gt; 2.x)。</p>
-<blockquote>
-<p>基于国内开源的囧境，可以使用淘宝的CNPM或用友集团内网的ynpm</p>
+<pre class="hljs"><code>$ npm install ac-tools -g或者ynpm install ac-tools -g 或cnpm install ac-tools -g 
+
+$ mkdir app &amp;&amp; <span class="hljs-built_in">cd</span> app
+
+$ npm install ac-tools --save
+
+$ ac-tools init</code></pre><blockquote>
+<p>ynpm 、cnpm 安装见最底下</p>
 </blockquote>
-<h4 id="ynpm">ynpm</h4>
-<p>公司内网通过使用<code>ynpm</code>,实现快速下载包，减少下载等待时间。详情请 <a href="https://github.com/iuap-design/ynpm-tool">点击</a></p>
-<pre class="hljs"><code>$ npm install ynpm-tool -g          <span class="hljs-comment"># 安装内部NPM工具</span>
+<p>稍等片刻安装结束后，输入下面命令来确定是否安装成功：</p>
+<pre class="hljs"><code>$ ac-tools
 
-$ ynpm install ac-tools -g               <span class="hljs-comment"># 安装 ac-tools 速度飞快在内网下</span></code></pre><h4 id="cnpm">cnpm</h4>
-<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
-<pre class="hljs"><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+  Usage :
 
-$ cnpm install ac-tools -g</code></pre><h4 id="npm">npm</h4>
-<p>首先进行工具命令的安装，需要安装到全局环境上使用，后面项目开发中，<code>bee-tools</code>是可以依赖包形式NodeAPI开发使用。</p>
-<pre class="hljs"><code>$ npm install ac-tools -g</code></pre><p>稍等片刻安装结束后，输入下面命令来确定是否安装成功：</p>
-<pre class="hljs"><code>$ ac-tools -v
-
-  Version : 0.0.1</code></pre><p>OK,到此成功。</p>
+  1. ac-tools init           Generate best application component project
+  2. ac-tools h              Help
+  3. ac-tools v              Version
+  4. ac-tools sample         Producing example Engineering
+  5. ac-tools mk             README.md documents are translated into HTML to be published on git IO</code></pre><p>OK,到此成功。</p>
 <h2 id="使用">使用</h2>
 <ol class="list">
 <li>如何使用前端集成工具<code>ac-tools</code>来快速创建一个应用组件：</li>
 </ol>
-<pre class="hljs"><code>$ mkdir app &amp;&amp; <span class="hljs-built_in">cd</span> app
+<pre class="hljs"><code>$ <span class="hljs-built_in">cd</span> app
 
 $ ac-tools init</code></pre><p>Start development server.</p>
 <pre class="hljs"><code>$ npm run dev</code></pre><p>After writing a good example.</p>
@@ -58,7 +58,7 @@ $ ac-tools init</code></pre><p>Start development server.</p>
 <pre class="hljs"><code>$ ac-tools mk</code></pre><h2 id="api">api</h2>
 <p>项目根目录，使用以下命令完成对应功能。</p>
 <blockquote>
-<p>5命令有1分钟的延时，请耐心等待。</p>
+<p>命令5会有一分钟的延时，请耐心等待。</p>
 </blockquote>
 <table>
 <thead>
@@ -96,7 +96,16 @@ $ ac-tools init</code></pre><p>Start development server.</p>
 </tr>
 </tbody>
 </table>
-      </div>
+<p>##其他</p>
+<h3 id="ynpm">ynpm</h3>
+<p>公司内网通过使用<code>ynpm</code>,实现快速下载包，减少下载等待时间。详情请 <a href="https://github.com/iuap-design/ynpm-tool">点击</a></p>
+<pre class="hljs"><code>$ npm install ynpm-tool -g          <span class="hljs-comment"># 安装内部NPM工具</span>
+
+$ ynpm install ac-tools -g               <span class="hljs-comment"># 安装 ac-tools 速度飞快在内网下</span></code></pre><h3 id="cnpm">cnpm</h3>
+<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<pre class="hljs"><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+$ cnpm install ac-tools -g</code></pre>      </div>
     </div>
   </div>
 

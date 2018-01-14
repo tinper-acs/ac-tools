@@ -12,7 +12,7 @@ module.exports = {
         console.log(chalk.green('2. ac-tools h              Help'));
         console.log(chalk.green('3. ac-tools v              Version'));
         console.log(chalk.green('4. ac-tools sample         Producing example Engineering'));
-        console.log(chalk.green('5. ac-tools mk             README.md documents are translated into HTML to be published on git IO'));
+        console.log(chalk.green('5. ac-tools md             README.md documents are translated into HTML to be published on git IO'));
 
         console.log();
     },

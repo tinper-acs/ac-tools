@@ -30,7 +30,7 @@ $ ac-tools
   2. ac-tools h              Help
   3. ac-tools v              Version
   4. ac-tools sample         Producing example Engineering
-  5. ac-tools mk             README.md documents are translated into HTML to be published on git IO
+  5. ac-tools md             README.md documents are translated into HTML to be published on git IO
 
 ```
 OK,到此成功。
@@ -73,7 +73,7 @@ $ ac-tools mk
 | 2 | ac-tools -v | 版本查询 |
 | 3 | ac-tools init | 下载模板项目|
 | 4 | ac-tools sample | 编写demo时，需要生成示例代码 |
-| 5 | ac-tools mk | README.md文档转化成html发布到git io上 |
+| 5 | ac-tools md | README.md文档转化成html发布到git io上 |
 
 ##其他
 
