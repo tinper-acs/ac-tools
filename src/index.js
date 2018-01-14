@@ -1,6 +1,9 @@
 const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs');
+const help = require('./help');
+const init = require('./init');
+const page = require('./page');
 
 function getHelp() {
   console.log(chalk.green(" Usage : "));
@@ -99,8 +102,7 @@ function sampleInit(paths){
   });
 };
 
-const help = require('./help');
-const init = require('./init');
+
 
 module.exports = {
   plugin: function(options) {
@@ -120,6 +122,10 @@ module.exports = {
             var p = path.join(process.cwd(),'./demo/demolist');
             sampleInit(p);
             break;
+        case "mk":
+            page(options);
+            break;
+
         default:
             help.help();
     }
