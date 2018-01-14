@@ -7,14 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "uba-ac-sample",
-      "program": "${workspaceFolder}/bin/uba-ac-sample.js"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/index.js"
+      "name": "ac-tools",
+      "program": "${workspaceFolder}/bin/ac-tools.js"
     }
   ]
 }
