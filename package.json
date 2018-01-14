@@ -1,7 +1,7 @@
 {
-  "name": "uba-ac-sample",
-  "version": "0.0.1",
-  "description": "uba ac  plugin for init sample",
+  "name": "ac-tools",
+  "version": "0.0.6",
+  "description": "ac-tools  plugin for init component",
   "main": "index.js",
   "bin": {
     "ac-tools": "./bin/ac-tools.js"
@@ -11,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iuap-design/uba-init.git"
+    "url": "git+https://github.com/tinper-acs/ac-tools.git"
   },
   "keywords": [
-    "uba",
+    "ac-tools",
     "init web"
   ],
   "author": "yueming@yonyou.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iuap-design/uba-init/issues"
+    "url": "https://github.com/tinper-acs/ac-tools/issues"
   },
-  "homepage": "https://github.com/iuap-design/uba-init#readme",
+  "homepage": "https://github.com/tinper-acs/ac-tools",
   "dependencies": {
     "chalk": "^1.1.3",
     "cross-spawn": "^5.1.0",
