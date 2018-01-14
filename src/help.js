@@ -13,10 +13,15 @@ module.exports = {
         console.log(chalk.green('3. ac-tools v              Version'));
         console.log(chalk.green('4. ac-tools sample         Producing example Engineering'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         console.log(chalk.green('5. ac-tools mk             README.md documents are translated into HTML to be published on git IO'));
 
 >>>>>>> doc
+=======
+        console.log(chalk.green('5. ac-tools mk             README.md documents are translated into HTML to be published on git IO'));
+
+>>>>>>> develop/0.0.1
         console.log();
     },
     version: () => {
