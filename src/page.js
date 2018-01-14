@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
-const showdown  = require('showdown');
 const ghpages = require('gh-pages');
 const argv = require('minimist')(process.argv.slice(2));
 const md_style = ["bootstrap3",
