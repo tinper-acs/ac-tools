@@ -122,7 +122,7 @@ module.exports = {
             var p = path.join(process.cwd(),'./demo/demolist');
             sampleInit(p);
             break;
-        case "mk":
+        case "md":
             page(options);
             break;
 
