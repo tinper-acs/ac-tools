@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ac-tools</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#ac-tools">ac-tools</a></li>
+    <li class="sidebar-header-2"><a href="#介绍">介绍</a></li>
+    <li class="sidebar-header-2"><a href="#安装">安装</a></li>
+    <li class="sidebar-header-4"><a href="#ynpm">ynpm</a></li>
+    <li class="sidebar-header-4"><a href="#cnpm">cnpm</a></li>
+    <li class="sidebar-header-4"><a href="#npm">npm</a></li>
+    <li class="sidebar-header-2"><a href="#使用">使用</a></li>
+    <li class="sidebar-header-2"><a href="#api">api</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="ac-tools">ac-tools</h1>
+<h2 id="介绍">介绍</h2>
+<p>是一款组件库编写应用组件开发工具 <a href="https://github.com/tinper-acs">开发应用组件</a> 执行远程代码访问、基本组件开发构建、demo示例的生成。</p>
+<h2 id="安装">安装</h2>
+<p>安装 <a href="https://nodejs.org">node.js</a> 开发环境.(node &gt; 6.x &amp;&amp; npm &gt; 2.x)。</p>
+<blockquote>
+<p>基于国内开源的囧境，可以使用淘宝的CNPM或用友集团内网的ynpm</p>
+</blockquote>
+<h4 id="ynpm">ynpm</h4>
+<p>公司内网通过使用<code>ynpm</code>,实现快速下载包，减少下载等待时间。详情请 <a href="https://github.com/iuap-design/ynpm-tool">点击</a></p>
+<pre class="hljs"><code>$ npm install ynpm-tool -g          <span class="hljs-comment"># 安装内部NPM工具</span>
+
+$ ynpm install ac-tools -g               <span class="hljs-comment"># 安装 ac-tools 速度飞快在内网下</span></code></pre><h4 id="cnpm">cnpm</h4>
+<p>你可以使用淘宝定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:</p>
+<pre class="hljs"><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+$ cnpm install ac-tools -g</code></pre><h4 id="npm">npm</h4>
+<p>首先进行工具命令的安装，需要安装到全局环境上使用，后面项目开发中，<code>bee-tools</code>是可以依赖包形式NodeAPI开发使用。</p>
+<pre class="hljs"><code>$ npm install ac-tools -g</code></pre><p>稍等片刻安装结束后，输入下面命令来确定是否安装成功：</p>
+<pre class="hljs"><code>$ ac-tools -v
+
+  Version : 0.0.1</code></pre><p>OK,到此成功。</p>
+<h2 id="使用">使用</h2>
+<ol class="list">
+<li>如何使用前端集成工具<code>ac-tools</code>来快速创建一个应用组件：</li>
+</ol>
+<pre class="hljs"><code>$ mkdir app &amp;&amp; <span class="hljs-built_in">cd</span> app
+
+$ ac-tools init</code></pre><p>Start development server.</p>
+<pre class="hljs"><code>$ npm run dev</code></pre><p>After writing a good example.</p>
+<pre class="hljs"><code>$ ac-tools sample</code></pre><p>After writing README.md documents.</p>
+<pre class="hljs"><code>$ ac-tools mk</code></pre><h2 id="api">api</h2>
+<p>项目根目录，使用以下命令完成对应功能。</p>
+<blockquote>
+<p>5命令有1分钟的延时，请耐心等待。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Scripts 脚本命令</th>
+<th>Description 功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ac-tools -h</td>
+<td>api 查询</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ac-tools -v</td>
+<td>版本查询</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ac-tools init</td>
+<td>下载模板项目</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ac-tools sample</td>
+<td>编写demo时，需要生成示例代码</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ac-tools mk</td>
+<td>README.md文档转化成html发布到git io上</td>
+</tr>
+</tbody>
+</table>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
