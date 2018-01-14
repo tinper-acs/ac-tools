@@ -1,10 +1,6 @@
 {
   "name": "ac-tools",
-<<<<<<< HEAD
-  "version": "0.0.5",
-=======
   "version": "0.0.6",
->>>>>>> develop/0.0.1
   "description": "ac-tools  plugin for init component",
   "main": "index.js",
   "bin": {

@@ -4,17 +4,6 @@
 ## 介绍
 
 是一款组件库编写组件开发工具 [应用组件](https://github.com/tinper-acs) 执行远程代码访问、基本组件开发构建、demo示例的生成。
-<<<<<<< HEAD
-
-## 安装
-
-创建项目目录
-```bash
-$ mkdir app && cd app
-
-$ npm install ac-tools -save
-
-=======
 
 
 ## 安装
@@ -26,7 +15,6 @@ $ mkdir app && cd app
 
 $ npm install ac-tools --save
 
->>>>>>> develop/0.0.1
 $ ac-tools init
 ```
 > ynpm 、cnpm 安装见最底下
@@ -35,15 +23,9 @@ $ ac-tools init
 
 ```bash
 $ ac-tools
-<<<<<<< HEAD
 
   Usage :
 
-=======
-
-  Usage :
-
->>>>>>> develop/0.0.1
   1. ac-tools init           Generate best application component project
   2. ac-tools h              Help
   3. ac-tools v              Version
@@ -83,11 +65,7 @@ $ ac-tools mk
 
 项目根目录，使用以下命令完成对应功能。
 
-<<<<<<< HEAD
-> 5命令有一分钟的延时,请耐心等待。
-=======
 >命令5会有一分钟的延时，请耐心等待。
->>>>>>> develop/0.0.1
 
 | # | Scripts 脚本命令 | Description 功能描述 |
 | --- | --- | --- |
