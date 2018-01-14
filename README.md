@@ -13,7 +13,7 @@ $ npm install ac-tools -g或者ynpm install ac-tools -g 或cnpm install ac-tools
 
 $ mkdir app && cd app
 
-$ npm install ac-tools -save
+$ npm install ac-tools --save
 
 $ ac-tools init
 ```
