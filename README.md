@@ -15,7 +15,6 @@ $ mkdir app && cd app
 
 $ npm install ac-tools --save
 
-$ ac-tools init
 ```
 > ynpm 、cnpm 安装见最底下
 
