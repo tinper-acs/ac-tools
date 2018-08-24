@@ -11,7 +11,6 @@ const download = require('download-git-repo');
 const spawn = require('cross-spawn');
 
 module.exports = () => {
-    console.log();
     var questions = [{
         type: 'input',
         name: 'name',
@@ -30,31 +29,35 @@ module.exports = () => {
         }
         help.info(`Downloading \'ac\' please wait.`);
         //下载项目
-        download("tinper-acs/app-component-templ", `${answers.name}`, function(err) {
+        download("fridaydream/ac-template", `${answers.name}`, function(err) {
             if (!err) {
                 help.info(`ac ${answers.name} done.`);
                 inquirer.prompt([{
                     type: 'confirm',
-                    message: 'Automatically install NPM dependent packages?',
+                    message: 'Automatically install YNPM dependent packages?',
                     name: 'ok'
                 }]).then(function(res) {
+                    // 改变模版中 output文件中js和css 的文件名
+
+
                     var npmInstallChdir = path.resolve('.', answers.name);
                     if (res.ok) {
-                        help.info(`Install NPM dependent packages,please wait.`);
+                        help.info(`Install YNPM dependent packages,please wait.`);
                         //选择自动安装
                         process.chdir(npmInstallChdir);
                         var args = ['install'].filter(function(e) {
                             return e;
                         });
-                        var proc = spawn('npm', args, {
+                        var proc = spawn('ynpm', args, {
                             stdio: 'inherit'
                         });
                         proc.on('close', function(code) {
+                            console.log('okkkkkkkkkkk===close')
                             if (code !== 0) {
-                                console.error('`npm ' + args.join(' ') + '` failed');
+                                console.error('`ynpm ' + args.join(' ') + '` failed');
                                 return;
                             }
-                            help.info(`NPM package installed. cd ${answers.name} && npm start`);
+                            help.info(`YNPM package installed. cd ${answers.name} && npm start`);
                         });
 
                     } else {

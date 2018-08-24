@@ -43,7 +43,19 @@ module.exports = (options) => {
             fs.writeFile(process.cwd() + '/docs/index.html', _data, {flag: 'w+'}, function (err) {
               err?console.error(err):console.log(chalk.green(" create sample success ! "));
               fs.unlinkSync(process.cwd()+ "/docs/README.html",function(){err});
-              ghpages.publish(process.cwd()+ "/docs", function(err) {});
+             setTimeout(()=>{
+               console.log('process.cwd()+ "/docs"',process.cwd()+ "/docs")
+               ghpages.publish(process.cwd()+ "/docs",{ 
+                 remote: 'origin',
+                 branch: 'gh-pages',
+                 depth: 1,
+                 logger: function(){
+ 
+                 }
+               }, function(err) {
+                 console.log(err)
+               });
+             },1000)
            });
         });
       });
