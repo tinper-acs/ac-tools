@@ -9,6 +9,59 @@ const pathExists = require('path-exists');
 const fs = require('fs');
 const download = require('download-git-repo');
 const spawn = require('cross-spawn');
+const propertiesParser = require('properties-parser')
+
+
+/**
+ * 判断是否有Rc文件
+ * @param {any} fileName 
+ * @returns  true、false
+ */
+function getValidateRc(filePath){
+    try {
+        fs.accessSync(filePath,fs.F_OK);
+    }catch (e) {
+        return false;
+    }
+    return true;
+}
+/**
+ * 获取文件
+ * @param {any} fileName 
+ * @returns 
+ */
+function getRcEmail(){
+    const userPath = process.env.HOME;
+    const filePath = userPath+"/.ynpmrc";
+    let ynpmrc;
+    if(getValidateRc(filePath)){ 
+        ynpmrc = propertiesParser.read(filePath);
+      }else{
+        ynpmrc = '';
+      }
+    return ynpmrc ? ynpmrc.email : '';
+}
+
+function changePkgConfig(name) {
+    console.log('ss',process.cwd())
+    const pkg_path = process.cwd() + `/${name}/package.json`;
+    let pkg_json = JSON.parse(fs.readFileSync(pkg_path,'utf8'))
+    console.log('pkg', pkg_json)
+    const author = getRcEmail()
+    console.log('author',author)
+    pkg_json.name = name
+    pkg_json.bugs = {
+        url: `https://github.com/tinper-acs/${name}/issues`
+    }
+    pkg_json.homepage = `https://github.com/tinper-acs/${name}#readme`
+    pkg_json.repository = {
+        "type": "git",
+        "url": `git+https://github.com/tinper-acs/${name}.git`
+    }
+    pkg_json.author = author;
+    console.log(pkg_path, JSON.stringify(pkg_json, null, '  '), 'utf-8')
+    fs.writeFileSync(pkg_path, JSON.stringify(pkg_json, null, '  '), 'utf-8')
+}
 
 module.exports = () => {
     var questions = [{
@@ -19,8 +72,10 @@ module.exports = () => {
             return 'ac project'
         }
     }];
+    
     inquirer.prompt(questions).then(function(answers) {
         var root = path.resolve(answers.name);
+
         if (!pathExists.sync(answers.name)) {
             fs.mkdirSync(root);
         } else {
@@ -29,20 +84,18 @@ module.exports = () => {
         }
         help.info(`Downloading \'ac\' please wait.`);
         //下载项目
-        download("fridaydream/ac-template", `${answers.name}`, function(err) {
+        download("tinper-acs/app-component-templ", `${answers.name}`, function(err) {
             if (!err) {
                 help.info(`ac ${answers.name} done.`);
+                changePkgConfig(answers.name)
                 inquirer.prompt([{
                     type: 'confirm',
                     message: 'Automatically install YNPM dependent packages?',
                     name: 'ok'
                 }]).then(function(res) {
-                    // 改变模版中 output文件中js和css 的文件名
-
-
                     var npmInstallChdir = path.resolve('.', answers.name);
                     if (res.ok) {
-                        help.info(`Install YNPM dependent packages,please wait.`);
+                        help.info(`Install YNPM dependence packages,please wait.`);
                         //选择自动安装
                         process.chdir(npmInstallChdir);
                         var args = ['install'].filter(function(e) {
@@ -52,7 +105,6 @@ module.exports = () => {
                             stdio: 'inherit'
                         });
                         proc.on('close', function(code) {
-                            console.log('okkkkkkkkkkk===close')
                             if (code !== 0) {
                                 console.error('`ynpm ' + args.join(' ') + '` failed');
                                 return;
