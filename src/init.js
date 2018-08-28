@@ -38,8 +38,6 @@ module.exports = () => {
                     name: 'ok'
                 }]).then(function(res) {
                     // 改变模版中 output文件中js和css 的文件名
-
-
                     var npmInstallChdir = path.resolve('.', answers.name);
                     if (res.ok) {
                         help.info(`Install YNPM dependent packages,please wait.`);
@@ -52,12 +50,11 @@ module.exports = () => {
                             stdio: 'inherit'
                         });
                         proc.on('close', function(code) {
-                            console.log('okkkkkkkkkkk===close')
                             if (code !== 0) {
                                 console.error('`ynpm ' + args.join(' ') + '` failed');
                                 return;
                             }
-                            help.info(`YNPM package installed. cd ${answers.name} && npm start`);
+                            help.info(`YNPM package installed. cd ${answers.name} && npm run dev`);
                         });
 
                     } else {
