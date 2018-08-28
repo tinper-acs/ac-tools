@@ -32,6 +32,7 @@
     "markdown-styles": "^3.1.10",
     "minimist": "^1.2.0",
     "path-exists": "^3.0.0",
+    "properties-parser": "^0.3.1",
     "request": "^2.81.0"
   }
 }
