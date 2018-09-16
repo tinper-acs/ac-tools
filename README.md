@@ -44,16 +44,21 @@ $ cd app
 $ ac-tools init
 ```
 
-Start development server.
+[初始化生成的模版文件对应的文档链接](https://github.com/tinper-acs/app-component-templ)
+
+2. Start development server.
 ```bash
 $ npm run dev
 ```
-After writing a good example.
+3. After writing a good example.
 ```bash
 $ ac-tools sample
 ```
-After writing README.md documents.
-
+4. Build io demo page.
+```bash
+$ npm run deploy
+```
+5. After writing README.md documents.And push to io page
 ```bash
 $ ac-tools md
 ```
@@ -67,13 +72,13 @@ $ ac-tools md
 
 | # | Scripts 脚本命令 | Description 功能描述 |
 | --- | --- | --- |
-| 1 | ac-tools -h | api 查询 |
-| 2 | ac-tools -v | 版本查询 |
+| 1 | ac-tools h | api 查询 |
+| 2 | ac-tools v | 版本查询 |
 | 3 | ac-tools init | 下载模板项目|
 | 4 | ac-tools sample | 编写demo时，需要生成示例代码 |
 | 5 | ac-tools md | README.md文档转化成html发布到git io上 |
 
-##其他
+## 其他
 
 ### ynpm
 

@@ -125,7 +125,6 @@ module.exports = {
         case "md":
             page(options);
             break;
-
         default:
             help.help();
     }

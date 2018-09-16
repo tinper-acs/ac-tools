@@ -43,12 +43,9 @@ function getRcEmail(){
 }
 
 function changePkgConfig(name) {
-    console.log('ss',process.cwd())
     const pkg_path = process.cwd() + `/${name}/package.json`;
     let pkg_json = JSON.parse(fs.readFileSync(pkg_path,'utf8'))
-    console.log('pkg', pkg_json)
     const author = getRcEmail()
-    console.log('author',author)
     pkg_json.name = name
     pkg_json.bugs = {
         url: `https://github.com/tinper-acs/${name}/issues`
@@ -59,7 +56,6 @@ function changePkgConfig(name) {
         "url": `git+https://github.com/tinper-acs/${name}.git`
     }
     pkg_json.author = author;
-    console.log(pkg_path, JSON.stringify(pkg_json, null, '  '), 'utf-8')
     fs.writeFileSync(pkg_path, JSON.stringify(pkg_json, null, '  '), 'utf-8')
 }
 
