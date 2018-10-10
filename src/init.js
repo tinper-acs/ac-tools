@@ -105,7 +105,7 @@ module.exports = () => {
                                 console.error('`ynpm ' + args.join(' ') + '` failed');
                                 return;
                             }
-                            help.info(`YNPM package installed. cd ${answers.name} && npm start`);
+                            help.info(`YNPM package installed. cd ${answers.name} && npm run dev`);
                         });
 
                     } else {

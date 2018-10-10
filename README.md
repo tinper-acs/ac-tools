@@ -3,21 +3,20 @@
 
 ## 介绍
 
-是一款组件库编写组件开发工具 [应用组件](https://github.com/tinper-acs) 执行远程代码访问、基本组件开发构建、demo示例的生成。
+是一款编写应用组件的开发工具 [应用组件](https://github.com/tinper-acs) 执行远程代码访问、基本组件开发构建、demo示例的生成等自动化工具。
 
 
 ## 安装
 
 ```bash
-$ npm install ac-tools -g或者ynpm install ac-tools -g 或cnpm install ac-tools -g 
+$ ynpm install ac-tools -g 或者 (npm install ac-tools -g )
 
 $ mkdir app && cd app
 
 $ ac-tools init
 ```
-> ynpm 、cnpm 安装见最底下
-
-稍等片刻安装结束后，输入下面命令来确定是否安装成功：
+ 
+> 稍等片刻安装结束后，输入下面命令来确定是否安装成功：
 
 ```bash
 $ ac-tools
@@ -80,12 +79,11 @@ $ ac-tools md
 
 ## 其他
 
-### ynpm
+### ynpm[推荐使用]
 
 公司内网通过使用`ynpm`,实现快速下载包，减少下载等待时间。详情请 [点击](https://github.com/iuap-design/ynpm-tool)
 
 ```bash
-$ npm install ynpm-tool -g          # 安装内部NPM工具
 
 $ ynpm install ac-tools -g               # 安装 ac-tools 速度飞快在内网下
 ```
@@ -129,4 +127,5 @@ $ cnpm install ac-tools -g
 }
 ```
 
-运行ac-tools cdn 生成cdn路径为：http://iuap-tenat-market.oss-cn-beijing.aliyuncs.com/yonyou-fed
+运行ac-tools cdn 生成cdn路径为：`http://iuap-tenat-market.oss-cn-beijing.aliyuncs.com/yonyou-fed`
+
