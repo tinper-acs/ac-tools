@@ -4,7 +4,7 @@ const fs = require('fs');
 const help = require('./help');
 const init = require('./init');
 const page = require('./page');
-
+const cdn = require('./cdn')
 function getHelp() {
   console.log(chalk.green(" Usage : "));
   console.log();
@@ -85,7 +85,7 @@ function sampleInit(paths){
       index = index.replace(/\{demolist\}/,code.join('')+"\n"+str);
 
 
-      fs.writeFile(path.join(process.cwd(),'./demo/index.js'), index, function (err) {
+      fs.writeFile(path.join(process.cwd(),'./demo/index.jsx'), index, function (err) {
           if (err) throw err;
           console.log('demo/index.js It\'s saved!');
           try{
@@ -124,6 +124,9 @@ module.exports = {
             break;
         case "md":
             page(options);
+            break;
+        case "cdn":
+            cdn();
             break;
         default:
             help.help();

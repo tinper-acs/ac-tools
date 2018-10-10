@@ -54,7 +54,7 @@ $ npm run dev
 ```bash
 $ ac-tools sample
 ```
-4. Build io demo page.
+4. Build io demo page. 
 ```bash
 $ npm run deploy
 ```
@@ -98,3 +98,35 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 $ cnpm install ac-tools -g
 ```
+
+### cdn
+
+| key | 对应含义 | 是否必填 |
+| --- | --- | --- |
+| accessKeyId | oss账号id | 是 |
+| accessKeySecret | oss账号secret | 是 |
+| bucket | oss初始化放置目录 | 是|
+| region | cdn的地区 | 是 |
+| pushDirName | 上传文件的目录(相对路径) | 否，默认选择dist文件夹 |
+| osspath | 上传文件生成url中path路径 | 否，默认为空 |
+| exclude | 上传文件的目录中不用上传的文件名称 | 否，默认为空 |
+
+
+
+> 例如 在文件根目录下创建`oss.config.json`
+
+```
+{
+  "ossconfig": {
+    "accessKeyId": "L1a2b3c4b5d6e7f",
+    "accessKeySecret": "WFsdFkkLslK8KNHsHHKKjjhh",
+    "bucket": "iuap-tenat-market",
+    "region": "oss-cn-beijing"
+  },
+  "pushDirName":"dist",
+  "osspath":"yonyou-fed",
+  "exclude":["index.html",'html/index.html']
+}
+```
+
+运行ac-tools cdn 生成cdn路径为：http://iuap-tenat-market.oss-cn-beijing.aliyuncs.com/yonyou-fed
