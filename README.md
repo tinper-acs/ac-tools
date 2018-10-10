@@ -76,6 +76,7 @@ $ ac-tools md
 | 3 | ac-tools init | 下载模板项目|
 | 4 | ac-tools sample | 编写demo时，需要生成示例代码 |
 | 5 | ac-tools md | README.md文档转化成html发布到git io上 |
+| 6 | ac-tools cdn | 将需要上传cdn的文件上传到cdn |
 
 ## 其他
 
@@ -97,7 +98,11 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 $ cnpm install ac-tools -g
 ```
 
-### cdn
+### ac-tools cdn
+
+> 例如 在文件根目录下创建`oss.config.json`
+
+对应的关键字含义
 
 | key | 对应含义 | 是否必填 |
 | --- | --- | --- |
@@ -109,9 +114,6 @@ $ cnpm install ac-tools -g
 | osspath | 上传文件生成url中path路径 | 否，默认为空 |
 | exclude | 上传文件的目录中不用上传的文件名称 | 否，默认为空 |
 
-
-
-> 例如 在文件根目录下创建`oss.config.json`
 
 ```
 {
