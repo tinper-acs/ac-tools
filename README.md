@@ -3,7 +3,7 @@
 
 ## 介绍
 
-是一款编写应用组件的开发工具 [应用组件](https://github.com/tinper-acs) 执行远程代码访问、基本组件开发构建、demo示例的生成等自动化工具。
+是一款编写应用组件的开发工具 [应用组件](https://github.com/tinper-acs) 执行远程代码访问、基本组件开发构建、demo示例的生成等自动化工具。
 
 
 ## 安装
@@ -131,3 +131,11 @@ $ cnpm install ac-tools -g
 
 运行ac-tools cdn 生成cdn路径为：`http://iuap-tenat-market.oss-cn-beijing.aliyuncs.com/yonyou-fed`
 
+### 发布github.io页面无权限问题
+
+```bash
+ssh-agent -s
+ssh-add ~/.ssh/id_rsa
+```
+
+依次执行这两个命令，就不会报github没有权限的问题了
